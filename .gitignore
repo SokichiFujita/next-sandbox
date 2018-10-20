@@ -4,7 +4,7 @@ gibo 2.1.0 by Simon Whitaker <sw@netcetera.org>
 https://github.com/simonwhitaker/gibo
 ### https://raw.github.com/github/gitignore/35441e97b4587b18284ce76d19a0133319c3c320/Node.gitignore
 
-out
+out/
 
 # Logs
 logs
