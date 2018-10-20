@@ -1,4 +1,6 @@
-export default () => {
+import fetch from 'isomorphic-unfetch'
+
+const TopPage = (json) => {
   return (
     <div>
       <div style={{
@@ -7,7 +9,17 @@ export default () => {
         backgroundSize: 'cover',
         backgroundImage: 'url(/static/hero.png)'
       }}/>
-      <div>Welcome to next.js!</div>
+      <h1>Next.js sandbox</h1>
+      <div> { json.stargazers_count } GitHub stars </div>
     </div>
   )
 }
+
+TopPage.getInitialProps = async ({ req }) => {
+  const res = await fetch('https://api.github.com/repos/zeit/next.js')
+  const json = await res.json();
+  console.log(json);
+  return json
+}
+
+export default TopPage
