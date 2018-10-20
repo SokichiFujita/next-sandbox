@@ -1,0 +1,1 @@
+export default () => <h1>Document Page</h1>
