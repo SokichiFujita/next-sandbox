@@ -1,6 +1,11 @@
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
 import Router from 'next/router'
+import dynamic from 'next/dynamic'
+
+const DynamicImageAreaWithCustomLoading = dynamic(() => import('../components/ImageArea'), {
+  loading: () => <p>CUSTOM LOADING...</p>
+})
 
 const handleRoute = () => {
   Router.push({ pathname: '/document', query: { key1: 'queryStringValue1'}})
@@ -16,8 +21,13 @@ const TopPage = (json) => {
         backgroundImage: 'url(/static/hero.png)'
       }}/>
       <h1>Next.js sandbox</h1>
+
+      <h2>Initial Fetch</h2>
+
       <h3>Fetched data from an API</h3>
       <div> { json.stargazers_count } GitHub stars </div>
+
+      <h2>Routing</h2>
 
       <h3>Link for internal url</h3>
       <Link href="/document">
@@ -44,6 +54,10 @@ const TopPage = (json) => {
 
       <h3>just an "a href" tag</h3>
       <a href="https://github.com/zeit/next.js">https://github.com/zeit/next.js</a>
+
+      <h2>Dynamic Import</h2>
+      <h3>Dynamic loading with custom component</h3>
+      <DynamicImageAreaWithCustomLoading style={{width:'100%'}} />
 
     </div>
   )
