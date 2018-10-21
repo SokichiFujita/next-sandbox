@@ -23,7 +23,7 @@ Firebase: https://next-sandbox-10a7f.firebaseapp.com
 now
 ```
 
-now: https://next-sandbox-vseaqdjypn.now.sh
+now: https://next-sandbox-qacsivsvyd.now.sh
 
 
 
