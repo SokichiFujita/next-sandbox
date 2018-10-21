@@ -20,10 +20,10 @@ Firebase: https://next-sandbox-10a7f.firebaseapp.com
 ## deploy to now
 
 ```
-npm run build
 now
 ```
 
-now: https://next-sandbox-kzaudpjneo.now.sh 
+now: https://next-sandbox-vseaqdjypn.now.sh
+
 
 
